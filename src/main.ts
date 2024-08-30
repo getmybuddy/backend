@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import { ValidationPipe } from '@nestjs/common';
 import { Logger } from 'nestjs-pino';
+import cookieParser from 'cookie-parser';
 
 import { AppModule } from './app.module';
 import { swaggerConfig } from './common/configs/swagger.config';
@@ -15,6 +16,7 @@ async function bootstrap() {
       whitelist: true,
     }),
   );
+  app.use(cookieParser());
   swaggerConfig(app);
   app.enableShutdownHooks();
   await app.listen(app.get(ConfigService).getOrThrow('PORT'));
