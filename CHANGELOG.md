@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/hackathon-warriors/backend/compare/v0.2.0...v0.3.0) (2024-08-30)
+
+
+### Features
+
+* **auth:** add login feature ([2cbb0c6](https://github.com/hackathon-warriors/backend/commit/2cbb0c6412a6026f0b5dce3797d09a51a15fc333))
+
 # [0.2.0](https://github.com/hackathon-warriors/backend/compare/v0.1.1...v0.2.0) (2024-08-30)
 
 
