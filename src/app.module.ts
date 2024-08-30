@@ -1,18 +1,20 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigModule } from '@nestjs/config';
 import { LoggerModule } from 'nestjs-pino';
 
 import { PrismaModule } from './prisma/prisma.module';
 import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './shared/shared.module';
+import { SharedService } from './shared/shared.service';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({ isGlobal: true }),
     LoggerModule.forRootAsync({
-      imports: [ConfigModule],
-      useFactory: (configService: ConfigService) => {
-        const isProduction =
-          configService.getOrThrow('NODE_ENV') === 'production';
+      imports: [SharedModule],
+      useFactory: (sharedService: SharedService) => {
+        const isProduction = sharedService.nodeEnv === 'production';
         return {
           pinoHttp: {
             transport: isProduction
@@ -27,10 +29,12 @@ import { UsersModule } from './users/users.module';
           },
         };
       },
-      inject: [ConfigService],
+      inject: [SharedService],
     }),
     PrismaModule,
     UsersModule,
+    AuthModule,
+    SharedModule,
   ],
   controllers: [],
   providers: [],

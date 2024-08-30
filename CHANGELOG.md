@@ -1,3 +1,11 @@
+# [0.2.0](https://github.com/hackathon-warriors/backend/compare/v0.1.1...v0.2.0) (2024-08-30)
+
+
+### Features
+
+* **database:** initialize prisma, logger and config also delete unnecessary files ([9b7bfbd](https://github.com/hackathon-warriors/backend/commit/9b7bfbddf872ff8b8171393ab2aee5d251e8a070))
+* **users:** add endpoint to create new user ([cf1d7fc](https://github.com/hackathon-warriors/backend/commit/cf1d7fcd54fb41c6a36259642635b50bb3abea60))
+
 ## [0.1.1](https://github.com/hackathon-warriors/backend/compare/v0.1.0...v0.1.1) (2024-08-28)
 
 

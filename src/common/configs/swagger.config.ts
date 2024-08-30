@@ -7,7 +7,11 @@ export const swaggerConfig = (app: INestApplication): void => {
     .setDescription('The API description')
     .setVersion('1.0')
     .setExternalDoc('Postman Collection', '/documentation-json')
-    .addBearerAuth();
+    .addCookieAuth('Authentication');
   const document = SwaggerModule.createDocument(app, documentBuilder.build());
-  SwaggerModule.setup('documentation', app, document);
+  SwaggerModule.setup('documentation', app, document, {
+    swaggerOptions: {
+      persistAuthorization: true,
+    },
+  });
 };
