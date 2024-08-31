@@ -1,11 +1,11 @@
 import { NestFactory } from '@nestjs/core';
-import { ConfigService } from '@nestjs/config';
 import { ValidationPipe } from '@nestjs/common';
 import { Logger } from 'nestjs-pino';
 import cookieParser from 'cookie-parser';
 
 import { AppModule } from './app.module';
 import { swaggerConfig } from './common/configs/swagger.config';
+import { SharedService } from './shared/shared.service';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
@@ -19,7 +19,7 @@ async function bootstrap() {
   app.use(cookieParser());
   swaggerConfig(app);
   app.enableShutdownHooks();
-  await app.listen(app.get(ConfigService).getOrThrow('PORT'));
+  await app.listen(app.get(SharedService).port);
   const logger = app.get(Logger);
   logger.log(`Application is running on: ${await app.getUrl()}`);
 }

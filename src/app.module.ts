@@ -7,6 +7,8 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { SharedService } from './shared/shared.service';
+import { GroqModule } from './groq/groq.module';
+import { FriendsModule } from './friends/friends.module';
 
 @Module({
   imports: [
@@ -35,6 +37,8 @@ import { SharedService } from './shared/shared.service';
     UsersModule,
     AuthModule,
     SharedModule,
+    GroqModule,
+    FriendsModule,
   ],
   controllers: [],
   providers: [],
