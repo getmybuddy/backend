@@ -31,8 +31,6 @@ export class UsersService {
         throw new UnprocessableEntityException(
           'Email/Username already exists.',
         );
-      } else if (error.response.statusCode === 422) {
-        throw error;
       }
 
       throw new InternalServerErrorException(error);

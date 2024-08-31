@@ -13,7 +13,7 @@ export class GroqController {
   constructor(private readonly groqService: GroqService) {}
 
   @Post('chat')
-  async handleMessage(@Body() body: groqChatDto): Promise<string> {
-    return this.groqService.handleMessage(body.message);
+  async handleMessage(@Body() request: groqChatDto): Promise<string> {
+    return this.groqService.handleMessage(request.message);
   }
 }
