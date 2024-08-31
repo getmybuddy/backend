@@ -1,0 +1,22 @@
+enum Gender {
+    Male
+    Female
+}
+
+model Friend {
+    id          Int      @id @default(autoincrement())
+    userId      Int      @map("user_id")
+    name        String   @db.VarChar(100)
+    age         Int
+    gender      Gender
+    occupation  String   @db.VarChar(100)
+    location    String   @db.VarChar(100)
+    description String   @db.Text
+    personality String[]
+    interests   String[]
+    shortBio    String   @db.Text
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+    @@map("friends")
+}
