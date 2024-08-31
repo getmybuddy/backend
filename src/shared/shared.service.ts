@@ -20,4 +20,32 @@ export class SharedService {
   get nodeEnv(): string {
     return this.get('NODE_ENV');
   }
+
+  get port(): number {
+    return this.configService.get<number>('PORT');
+  }
+
+  get groqApiBaseUrl(): string {
+    return this.get('GROQ_API_BASE_URL');
+  }
+
+  get groqApiKey(): string {
+    return this.get('GROQ_API_KEY');
+  }
+
+  get langchainTracingV2(): string {
+    return this.get('LANGCHAIN_TRACING_V2');
+  }
+
+  get langchainApiKey(): string {
+    return this.get('LANGCHAIN_API_KEY');
+  }
+
+  get langchainCallbacksBackground(): string {
+    return this.get('LANGCHAIN_CALLBACKS_BACKGROUND');
+  }
+
+  get langchainProject(): string {
+    return this.get('LANGCHAIN_PROJECT');
+  }
 }
