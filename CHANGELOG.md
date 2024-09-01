@@ -1,3 +1,14 @@
+## [0.5.1](https://github.com/hackathon-warriors/backend/compare/v0.5.0...v0.5.1) (2024-09-01)
+
+
+### Bug Fixes
+
+* **actions:** add npx prisma migrate deploy ([5155736](https://github.com/hackathon-warriors/backend/commit/51557366fe5fdf547f8ed45c01bf93ab5611134c))
+* **actions:** move npx prisma migrate deploy into preinstall script ([c7377ec](https://github.com/hackathon-warriors/backend/commit/c7377ecd3d8072a9c4f8969c99c3d43a4e8ea76e))
+* **actions:** remove node env ([5910be5](https://github.com/hackathon-warriors/backend/commit/5910be55b32cad318d1005927f31b8998e548992))
+* **deployment:** add script for deployment with railway ([9e8484a](https://github.com/hackathon-warriors/backend/commit/9e8484a9ed2c234ce061d291557775163d2148a2))
+* **husky:** add husky install mjs to avoid husky error ([2118dd1](https://github.com/hackathon-warriors/backend/commit/2118dd160a535dd3cf2e1ada3d5a82e950200221))
+
 # [0.5.0](https://github.com/hackathon-warriors/backend/compare/v0.4.0...v0.5.0) (2024-09-01)
 
 

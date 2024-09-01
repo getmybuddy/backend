@@ -39,14 +39,9 @@ export class CreateFriendDto {
   location: string;
 
   @ApiProperty()
-  @IsString()
-  @IsNotEmpty()
-  description: string;
-
-  @ApiProperty()
   @IsArray()
   @IsString({ each: true })
-  personality: string[];
+  personalities: string[];
 
   @ApiProperty()
   @IsArray()
