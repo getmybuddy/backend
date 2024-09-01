@@ -79,4 +79,11 @@ export class AuthService {
 
     return { tokenPayload };
   }
+
+  logout(response: Response) {
+    response.cookie('Authentication', '', {
+      httpOnly: true,
+      expires: new Date(),
+    });
+  }
 }
