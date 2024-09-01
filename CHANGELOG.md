@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/hackathon-warriors/backend/compare/v0.6.0...v0.7.0) (2024-09-01)
+
+
+### Features
+
+* **cors:** set cors in main.ts ([22e07d6](https://github.com/hackathon-warriors/backend/commit/22e07d641366f6ebd8d4369a25ae835182de77c2))
+
 # [0.6.0](https://github.com/hackathon-warriors/backend/compare/v0.5.1...v0.6.0) (2024-09-01)
 
 
