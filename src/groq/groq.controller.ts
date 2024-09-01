@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Param, Post, UseGuards } from '@nestjs/common';
 import { ApiCookieAuth, ApiTags } from '@nestjs/swagger';
 
 import { GroqService } from './groq.service';
@@ -12,8 +12,11 @@ import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 export class GroqController {
   constructor(private readonly groqService: GroqService) {}
 
-  @Post('chat')
-  async handleMessage(@Body() request: groqChatDto): Promise<string> {
-    return this.groqService.handleMessage(request.message);
+  @Post('chat/:friendId')
+  async handleMessage(
+    @Param('friendId') friendId: string,
+    @Body() request: groqChatDto,
+  ): Promise<string> {
+    return this.groqService.handleMessage(friendId, request.message);
   }
 }

@@ -28,4 +28,10 @@ export class FriendsService {
       },
     });
   }
+
+  async findFriendById(friendId: number) {
+    return this.prismaService.friend.findUnique({
+      where: { id: friendId },
+    });
+  }
 }
