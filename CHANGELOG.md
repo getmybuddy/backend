@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/hackathon-warriors/backend/compare/v0.5.1...v0.6.0) (2024-09-01)
+
+
+### Features
+
+* **auth:** add logout feature ([2bdaf86](https://github.com/hackathon-warriors/backend/commit/2bdaf8670b94179b4592578fd03f49c375cedf6b))
+
 ## [0.5.1](https://github.com/hackathon-warriors/backend/compare/v0.5.0...v0.5.1) (2024-09-01)
 
 
