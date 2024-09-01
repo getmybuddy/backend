@@ -30,7 +30,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - run: npx prisma migrate deploy
       - run: pnpm run build
       - run: pnpm run lint
       - name: Release
