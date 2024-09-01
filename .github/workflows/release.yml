@@ -13,7 +13,6 @@ jobs:
     env:
       HUSKY: 0
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
-      NODE_ENV: production
 
     strategy:
       matrix:
