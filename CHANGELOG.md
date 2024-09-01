@@ -1,3 +1,11 @@
+# [0.4.0](https://github.com/hackathon-warriors/backend/compare/v0.3.0...v0.4.0) (2024-08-31)
+
+
+### Features
+
+* **ai:** add chat feature powered ai ([f3c4db5](https://github.com/hackathon-warriors/backend/commit/f3c4db515f29628586c3a7e74ef4bb222156fbf5))
+* **friend:** add friend feature ([ec5bdfc](https://github.com/hackathon-warriors/backend/commit/ec5bdfc05003bb0ad5f74007f22b6b2a1e0074aa))
+
 # [0.3.0](https://github.com/hackathon-warriors/backend/compare/v0.2.0...v0.3.0) (2024-08-30)
 
 
