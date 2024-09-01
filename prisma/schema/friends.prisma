@@ -11,7 +11,6 @@ model Friend {
     gender      Gender
     occupation  String   @db.VarChar(100)
     location    String   @db.VarChar(100)
-    description String   @db.Text
     personality String[]
     interests   String[]
     shortBio    String   @db.Text
