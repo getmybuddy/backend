@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/hackathon-warriors/backend/compare/v0.4.0...v0.5.0) (2024-09-01)
+
+
+### Features
+
+* **ai:** update system persona using created friend from database ([4901fb2](https://github.com/hackathon-warriors/backend/commit/4901fb2a5ba8660891b1cacc7e87850bba2c4ad5))
+
 # [0.4.0](https://github.com/hackathon-warriors/backend/compare/v0.3.0...v0.4.0) (2024-08-31)
 
 
