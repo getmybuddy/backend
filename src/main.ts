@@ -9,6 +9,11 @@ import { SharedService } from './shared/shared.service';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
+  app.enableCors({
+    origin: '*',
+    methods: 'GET,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type, Accept',
+  });
   app.setGlobalPrefix('api');
   app.useLogger(app.get(Logger));
   app.useGlobalPipes(
